@@ -7,11 +7,11 @@
 # Matriz de datos [ID, Duracion, Clics]
 
 sesiones = [
-    [101, 200, 10],  # Fila 0
-    [102, 45, 2],    # Fila 1
-    [103, 120, 5],   # Fila 2
-    [104, 300, 15],  # Fila 3
-    [105, 50, 10]    # Fila 4
+    [101, 200, 10],  
+    [102, 45, 2],    
+    [103, 120, 5],   
+    [104, 300, 15],  
+    [105, 50, 10]    
 ]
 print("--- Sistema de Evaluacion de Compromiso ---")
 
@@ -21,7 +21,7 @@ def clasificar_compromiso(cliente):
     tiempo = cliente[1]
     clics = cliente[2]
     
-    # Se aplica la  lógica de condicionales
+    # Se aplica la  logica de condicionales
     if tiempo > 180 and clics > 8:
         return "Alto"
     elif tiempo < 60 or clics < 3:
@@ -29,14 +29,14 @@ def clasificar_compromiso(cliente):
     else:
         return "Medio"
     
-# 3. PROCESAMIENTO Y SALIDA
+# PROCESAMIENTO Y SALIDA
 print(f"{'ID CLIENTE':<12} | {'CLASIFICACION'}")
 print("-" * 30)
 
-# Recorre la matriz 'sesiones'
+# Recorre la matriz
 for fila in sesiones:
-    # Llama a la funcion y guardamos el resultado
+    # Llama a la funciOn y guardamos el resultado
     resultado = clasificar_compromiso(fila)
     
-    # Se muestra el ID (que esta en fila[0]) y el resultado
+    # Se muestra el ID
     print(f"{fila[0]:<12} | {resultado}")
