@@ -4,7 +4,7 @@
 #Fase 5
 #Nivel de compromiso del cliente 
 
-# Matriz de datos [ID, Duración, Clics]
+# Matriz de datos [ID, Duracion, Clics]
 
 sesiones = [
     [101, 200, 10],  # Fila 0
@@ -13,7 +13,7 @@ sesiones = [
     [104, 300, 15],  # Fila 3
     [105, 50, 10]    # Fila 4
 ]
-print("--- Sistema de Evaluación de Compromiso ---")
+print("--- Sistema de Evaluacion de Compromiso ---")
 
 def clasificar_compromiso(cliente):
     # Se extraen los datos de la lista 'cliente'
@@ -30,13 +30,13 @@ def clasificar_compromiso(cliente):
         return "Medio"
     
 # 3. PROCESAMIENTO Y SALIDA
-print(f"{'ID CLIENTE':<12} | {'CLASIFICACIÓN'}")
+print(f"{'ID CLIENTE':<12} | {'CLASIFICACION'}")
 print("-" * 30)
 
 # Recorre la matriz 'sesiones'
 for fila in sesiones:
-    # Llama a la función y guardamos el resultado
+    # Llama a la funcion y guardamos el resultado
     resultado = clasificar_compromiso(fila)
     
-    # Se muestra el ID (que está en fila[0]) y el resultado
+    # Se muestra el ID (que esta en fila[0]) y el resultado
     print(f"{fila[0]:<12} | {resultado}")
